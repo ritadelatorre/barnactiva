@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>EJERCICIO M821</title>
+</head>
+<body>
+<button onclick="crearOrdinadors()">Crear Ordenadores</button>
+<button onclick="consultarOrdinador()">Consultar Ordenador</button>
+<button onclick="consultarOrdinador2()">Consultar Ordenador (toString)</button>
+<div id="consultar" style="display:none;">
+   <p>Número del Ordenador <input id="num" type="text"></p>   
+   <p>Marca del Ordenador <input id="marca" type="text"></p>
+   <p>Modelo del Ordenador <input id="modelo" type="text"></p>
+   <p>
+      Procesador del Ordenador <input id="procesador" type="text">
+      <button onclick="cambiaProcesador()">cambia Procesador</button>
+   </p>
+   <p>RAM del Ordenador <input id="ram" type="text"></p>
+   <p>Disco del Ordenador <input id="disco" type="text"></p>
+</div>
+
+<script src="./js/ordenador.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>

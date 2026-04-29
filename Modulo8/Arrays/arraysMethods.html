@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ARRAY CLONE (prueba)</title>
+</head>
+<body>
+   <script>
+      let imagen="";
+      let array1=[1,2,3,4];
+      let array2=array1;
+      alert(array1 + '\n' + array2);
+      
+      array1= [   
+      { 
+         imagen : "paris.jpg",
+         nombre: "París",
+         title: "Capital de Francia",
+         descripcion : "Paris, ciudad de la Luz. Para otros, ciudad del amor. Hermosa y espléndida."
+      }
+      ,
+      {
+         imagen: "newyork.jpg",
+         nombre: "New York",
+         title: "USA",
+         descripcion	: "New York es llamada la capital del Mundo. Lo que no encuentres allí, en ninguna parte!"
+      }
+     ]
+     console.log("array1", array1);
+     array2 = array1;
+     console.log("array2", array2);
+     imagen = 
+     {
+      imagen: "londres.jpg",
+      nombre: "Londres",
+      title: "Capital de Inglaterra",
+      descripcion	: "Ciudad jardín. Preciosa, Cosmopolita... cuna de los Beatles "
+     };
+     array1.push(imagen)
+     console.log("array1", array1);
+     array2 = array1;
+     console.log("array2", array2);
+
+   </script>
+   
+</body>
+</html>
