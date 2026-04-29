@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="./css/estilos.css" rel="stylesheet">
+   <title>FDLP JS1_Exs</title>
+</head>
+<body>
+   <header>
+      <button onclick='irA("modulo0")'>INICIO</button>
+      <button id="oculta" onClick='ocultarTodo()'>OCULTAR</button>
+      <button id="muestra" onClick='mostrarTodo()'>MOSTRAR</button>
+      <button onclick='irA("modulo1")'>MODULO 1</button>
+      <button onclick='irA("modulo2")'>MODULO 2</button>
+      <button onclick='irA("modulo3")'>MODULO 3</button>
+      <button onclick='irA("modulo4")'>MODULO 4</button>
+      <button onclick='irA("modulo5")'>MODULO 5</button>
+      <button onclick='irA("modulo6")'>MODULO 6</button>
+      <button onclick='irA("modulo7")'>MODULO 7</button>
+      <button onclick='irA("modulo8")'>MODULO 8</button>
+      <button onclick='irA("modulo9")'>MODULO 9</button>
+      
+   </header>
+   <div><h3>&nbsp;</h3></div>
+
+   <div id="contenedor">
+
+      <details id="modulo0">
+         <summary>Presentación del curso</summary>
+         <p>Bienvenido/a al curso de Fundamentos de la Programación con JavaScript. Esta fase está diseñada para adquirir una base de programación orientada a objectes (POO) que permita entrar con garantías a la siguiente fase, la especialización con mentoría.</p> 
+         <p><b>Herramientas necesarias: </b> Tener instalado el editor de codigo Visual Studio Code y cualquier navegador web.</p>
+         <p>Objectivos del curso:</p> 
+         <ul>
+            <li>Aprender la sintaxis básica de JavaScript</li>
+            <li>Trabajar con diferentes tipos de variables y constants</li>
+            <li>Aprender el funcionamento de les estructuras condicionales</li>
+            <li>Aprender cómo funcionan los arrays</li>
+            <li>Utilizar los diferentes tipos de bucles y saber cuál utilizar en cada caso</li>
+            <li>Trabajar con funciones</li>
+            <li>Entender y ser capaces de programar con POO</li>
+         </ul>
+      </details>
+
+      <details id="modulo1">
+         <summary>Módulo 1. Introducción al JavaScript <i>(sin Ejercicios)</i></summary>
+         <ul>
+            <li><a target="_blank" href="./Modulo1/FDLP_JS_M0_Presentacio.pdf">Presentación (PDF)</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_intro.asp">
+               Introducción al JavaScript</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_whereto.asp">
+               Dónde escribir el código JavaScript</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_comments.asp">
+               Comentarios en el código</a></li>
+            <li><a target="_blank" href="./Modulo1/FDLP_JS_M1_Introduccio.pdf">Introducción al JavaScript (PDF)</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=SV2UqfTgJXQ">Curso Desarrollo Útil Youtube (1)</a></li>
+         </ul>
+      </details>
+
+      <details id="modulo2">
+         <summary>Módulo 2. Expressiones y operadores</summary>
+         <ul>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_statements.asp">
+               Expressiones</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_statements.asp">
+               Sintaxis</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_variables.asp">
+               Variables y constantes</a></li>
+            <li><a target="_blank" href="./Modulo2/FDLP_JS_M2_Identificadores_y_Variables.pdf">Indentificadors i variables (PDF)</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_operators.asp">
+               Operadores</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=XC-Mdb6KMBM">
+               Curso Desarrollo Útil Youtube (2)</a></li>
+            <li><a target="_blank" href="./Modulo2/FDLP_JS_M2_Operadores.pdf">Operadors (PDF)</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=ORpYqsTFxoI">
+               Curso Desarrollo Útil Youtube (3)</a></li>
+            <!-- Conversión implícita y explícita -->
+            <li><mark>Salida de datos por consola (console.log, console.table, console.clear) y alert</mark></li>
+            <li><mark>Ejercicio M21. Presentació personal. Nom y cognom (Strings), edat (number) i hobbies (array con variable)</mark></li>
+         </ul>
+      </details>
+
+      <details id="modulo3">
+         <summary>Módulo 3. Entrada y salida de datos</summary>
+         <ul> 
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_statements.asp">
+               Entrada de dades (prompt i confirm)</a></li>
+            <li><a target="_blank" href="./Modulo3/FDLP_JS_M3_Interaccio.pdf">
+               Mostrar i llegir dades: <mark>input e innerHTML</mark> (PDF)</a></li>
+            <li><mark><b>Button</b> i estructura mínima de una funció: ( onclick() )</mark></li>
+            <li>Exemple: Recollir i mostrar dades per pantalla (.zip en Moodle)</li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_string_templates.asp">
+               <strong> String Templates</strong></a></li>
+            <li><a target="_blank" href="./Modulo3/M31.html">
+               <strong> Ejercicio M31</strong></a>
+               Mostra dades mitjançant differents vias.</li>
+            <li><a target="_blank" href="./Modulo3/M32.html">
+                <strong> Ejercicio M32</strong></a> Operacions matemàtiques</li>
+            <li><a target="_blank" href="./Modulo3/M33.html">
+               <strong> Ejercicio M33</strong></a>
+               Mostra la mitjana de 3 notes per pantalla.</li>
+            <li><a target="_blank" href="./Modulo3/M3Extra1.html">
+               <strong> Ejercicio M3 Extra1</strong></a>
+               Llegeix un número i mostra el doble i el triple.</li>
+            <li><a target="_blank" href="./Modulo3/M3Extra2.html">
+               <strong> Ejercicio M3 Extra2</strong></a>
+               Calcula els litres de pintura necessaris per a pintar una paret rectangular.</li>
+         </ul>
+      </details>
+
+      <details id="modulo4">
+         <summary>Módulo 4. Estructuras condicionales</summary>      
+         <ul>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_if_else.asp">
+               Condicionales if, if else and else if</a></li>
+            <li><a target="_blank" href="./Modulo4/FDLP_JS_M4_Condicionals_If.pdf">
+               Condicionales if (PDF)</a></li>
+            <li><a target="_blank" href="./Modulo4/M41.html">
+               <strong> Ejercicio M41</strong></a>
+               Muestra si un usuario es major de edad o no.</li>
+            <li><a target="_blank" href="./Modulo4/M42.html">
+               <strong> Ejercicio M42</strong></a>
+               Mostra el possible nivell d'estudi segon l'edat.</li>
+            <li><a target="_blank" href="./Modulo4/M43.html">
+               <strong> Ejercicio M43</strong></a> Beques. Condicional compost.</li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=XqrVQm9bhcY">
+               Video #5 - Condicionales I - Sentencia if-else - Dorian Design.</li>               
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_switch.asp">
+               Condicional switch</a></li>
+            <li><a target="_blank" href="./Modulo4/FDLP_JS_M4_Condicionals_switch.pdf">
+                  Condicional switch (PDF)</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=pR3RdSK4YTk">
+               Video #7 - Condicionales II - Condicional switch - Dorian Design.</li>            
+            <li><a target="_blank" href="./Modulo4/M44.html">
+               <strong> Ejercicio M44</strong></a>
+               Calcular els dies d'un mes introduït.</li>
+            <li><a target="_blank" href="./Modulo4/M45.html">
+                <strong> Ejercicio M45</strong></a>
+                Calculadora arcaica (demanar 2 nombres i un operador)</li>
+            <li><a target="_blank" href="./Modulo4/M46.html">
+               <strong> Ejercicio M46</strong></a>
+               Calcular signe del zodíac.</li>
+            <li><a target="_blank" href="./Modulo4/M4Extra1.html">
+               <strong> Ejercicio M4 Extra1</strong></a>
+               Calcular múltiples de un número. Validar el rango numèric del divisor</li>
+            <li><a target="_blank" href="./Modulo4/M4Extra2.html">
+               <strong> Ejercicio M4 Extra2</strong></a>
+               Demanar un número entre 0 i 99 i mostra'l escrit en lletres.</li>
+            <li><a target="_blank" href="./Modulo4/M4Extra3.html">
+               <strong> Ejercicio M4 Extra3</strong></a>
+               Joc: pedra, paper o tisora.</li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=8lb8DLK9C84">
+               Video #8 - Condicionales III - Operador ternario - Dorian Design.</a></li> 
+         </ul>
+      </details>
+
+      <details id="modulo5">
+         <summary>Módulo 5. Estructuras repetitivas</summary>
+         <ul>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_loop_for.asp">
+               El bucle for</a></li>
+            <li><a target="_blank" href="./Modulo5/FDLP_JS_M5_ArraysBucleFor.pdf">
+               Bucle for (PDF)</a></li>
+            <li><a target="_blank" href="./Modulo5/M52.html">
+                <strong> Ejercicio M52</strong></a>
+                Suma de los valores comprendidos entre dos números.</li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_loop_while.asp">
+               El bucle while</a></li>
+            <li><a target="_blank" href="./Modulo5/FDLP_JS_M5_BucleWhileDoWhile.pdf">
+               Bucles while y do while (PDF)</a></li>
+            <li><a target="_blank" href="./Modulo5/M51.html">
+                  <strong> Ejercicio M51</strong></a> Palabras en array.</li>
+            <li><a target="_blank" href="./Modulo5/M53.html">
+               <strong> Ejercicio M53</strong></a>
+               Adivinar un número (1-10) generado aleatoriamente por el programa (random).</li>
+            <li><a target="_blank" href="./Modulo5/M54.html">
+               <strong> Ejercicio M54</strong></a>
+               Adivinar un número (1-10) generado aleatoriamente por el programa en 5 intentos.</li>
+            <li><a target="_blank" href="./Modulo5/M5Extra1.html">
+               <strong> Ejercicio M5 Extra1</strong></a>
+               Adivinar un número (1-500) generado aleatoriamente por el programa con mensajes (frío/tibio/caliente).</li>
+            <li><a target="_blank" href="./Modulo5/M5Extra2.html">
+               <strong> Ejercicio M5 Extra2</strong></a>
+               (Anem a practicar) Dibuxar la lletra L per pantalla, feta amb asteriscs.</li>
+         </ul>
+      </details>
+
+      <details id="modulo6">
+         <summary>Módulo 6. Funcions</summary>
+         <ul> 
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">
+               Funcions</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_function_parameters.asp">
+               Pas de paràmetres en les funcions</a></li>               
+            <li><a target="_blank" href="./Modulo6/FDLP_JS_M6_Funcions.pdf">
+               Funcions en JavaScript (PDF)</a></li>
+            <p><mark>Ya han estado usando el onclick(), cambiar los ejercicios</mark></p>
+            <li><a target="_blank" href="./Modulo6/M61.html">
+               <strong> Ejercicio M6.1</strong></a>
+               Calculadora arcaica amb funcions.</li>
+            <li><a target="_blank" href="./Modulo6/M62.html">
+                <strong> Ejercicio M6.2</strong></a>Calcular l'edat mitjana d'un número de persones</li>
+            <li><a target="_blank" href="./Modulo6/M63.html">Ejercicio M6.3</a> Pràctica l'ús de funcions.</li>            
+            <li><a href="https://www.youtube.com/watch?v=H6U1Pm7x60E">
+               Video #10. Funciones. Jon Mircha</a></li>
+            <p><mark>Para poder entender las funciones de array</mark></p>            
+            <li><a href="#"><mark>Funcions fletxa</mark> (PDF)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=21r6TEJh_Y0">
+               Video #18. Funciones - Dorian Design.</a></li>                           
+            <li><a href="https://www.youtube.com/watch?v=WuCw9agV3Rc">
+               Video #21. Funciones Flecha. Jon Mircha</a></li>
+               <!-- <li><a href="#"><mark>Callbacks</mark> (PDF)</a></li> -->
+               
+            </ul>
+      </details>
+      
+      <details id="modulo7" open>
+         <summary>Módulo 7. Anem a practicar...</summary>
+         <h3>Entrada de Datos</h3>
+         <p>Del módulo 7.1 Anem a practicar, hacer los ejercicios 7 y 8</p>
+         <ul>
+            <li><a target="_blank" href="./Modulo7/M737.html"><strong> Ejercicio M737</strong></a>
+               Fideuà.</li>
+            <li><a target="_blank" href="./Modulo7/M718.html"><strong> Ejercicio M718</strong></a>
+                  Conversión Celcius Farenheit.</li>
+         </ul>
+
+         <h3>Condicionales</h3>
+         <p>Del módulo 7.1 Anem a practicar, hacer los ejercicios 1, 3 y 4</p> 
+         <ul>
+            <li><a target="_blank" href="./Modulo7/M711.html"><strong> Ejercicio M711</strong></a>
+               Promedio de tres notas con mensaje.</li>
+            <li><a target="_blank" href="./Modulo7/M713.html"><strong> Ejercicio M713</strong></a>
+               Calcular si un número es par o impar.</li>
+            <li><a target="_blank" href="./Modulo7/M714.html"><strong> Ejercicio M714</strong></a>
+               Comprobar si un número es negativo.</li>
+         </ul>
+         <h3>Bucle FOR</h3>
+         <p>Del módulo 7.1 Anem a practicar, hacer los ejercicios 5, 6 y 7</p>   
+         <ul>
+            <li><a target="_blank" href="./Modulo7/M715.html"><strong> Ejercicio M715</strong></a>
+               Números pares descendentes de 100 a 0.</li>
+            <li><a target="_blank" href="./Modulo7/M716.html"><strong> Ejercicio M716</strong></a>
+               Tabla de multiplicar de un número.</li>
+            <li><a target="_blank" href="./Modulo7/M717.html"><strong> Ejercicio M717</strong></a>
+               Dibujar un cuadrado un tamaño y caracter personalizado</li>
+         </ul>
+         <p>Del módulo 7.2 Anem a practicar, hacer el ejercicios 4<br>
+            Del módulo 7.3 Anem a practicar, hacer el ejercicios 6</p>   
+         <ul> 
+            <li><a target="_blank" href="./Modulo7/M724.html"><strong> Ejercicio M724</strong></a>
+               Cálculo factorial.</li>
+            <li><a target="_blank" href="./Modulo7/M736.html"><strong> Ejercicio M736</strong></a>
+               Sumar los números pares y los números impares de un array.<br>
+               <em>document.getElementById("x").value.split('caracter')</em><br>
+               <a href="https://www.w3schools.com/jsref/jsref_split.asp" target="_blank" rel="noopener noreferrer">https://www.w3schools.com/jsref/jsref_split.asp</a>
+            </li>
+         </ul>
+
+         <p>Del módulo 7.2 Anem a practicar, hacer los ejercicios 1, 2, y 3<br>
+            Del módulo 5, hacer el ejercicio 5 EXTRA 2</p>   
+         <ul>
+            <li><a target="_blank" href="./Modulo7/M721.html"><strong> Ejercicio M721</strong></a>
+               Triángulo rectángulo de asteriscos.</li>
+            <li><a target="_blank" href="./Modulo7/M722.html"><strong> Ejercicio M722</strong></a>
+               Triángulo rectángulo invertido de asteriscos.</li>
+            <li><a target="_blank" href="./Modulo7/M723.html"><strong> Ejercicio M723</strong></a>
+               Flecha de asteriscos.</li>
+            <li><a target="_blank" href="./Modulo5/M5Extra2.html">
+               <strong> Ejercicio M5e2</strong></a> Lletra L per pantalla, feta amb asteriscs.</li>
+         </ul>
+
+
+         <h3>Bucle WHILE</h3>
+         <p>Del módulo 7.2 Anem a practicar, los ejercicios 2, 5 y 8</p>
+         <ul>
+		<li><a target="_blank" href="./Modulo7/M712.html"><strong> Ejercicio M712</strong></a>
+               Promedio de las notas de toda una clase.</li>
+            <li><a target="_blank" href="./Modulo7/M725.html"><strong> Ejercicio M725</strong></a>
+               Número primo.</li>
+            <li><a target="_blank" href="./Modulo7/M728.html"><strong> Ejercicio M728</strong></a>
+               Successió de Fibonacci.</li>
+         </ul>
+
+         <h3>Con funciones</h3>
+         <p>Del módulo 7.2 Anem a practicar, los ejercicios 6 y 7<br>   
+            Del módulo 7.3 Anem a practicar, el ejercicio 1</p>
+         <ul>
+            <li><a target="_blank" href="./Modulo7/M726.html"><strong> Ejercicio M726</strong></a>
+               Introduir números fins a trobar un nombre primer</li>
+            <li><a target="_blank" href="./Modulo7/M727.html"><strong> Ejercicio M727</strong></a>
+               Revisar si un any es de traspàs.</li>
+            <li><a target="_blank" href="./Modulo7/M731.html"><strong> Ejercicio M731</strong></a>
+               Càlcul de l'àrea d'una figura geomètrica.</li>
+         </ul>
+         <p>Del módulo 7.3 Anem a practicar, hacer los ejercicios 2, 3, 4 y 5</p>   
+         <ul>
+            <li><a target="_blank" href="./Modulo7/M732.html"><strong> Ejercicio M732</strong></a>
+               String de revés.</li>
+            <li><a target="_blank" href="./Modulo7/M733.html"><strong> Ejercicio M733</strong></a>
+               Comprobar si una frase és un palíndrom.</li>
+            <li><a target="_blank" href="./Modulo7/M734.html"><strong> Ejercicio M734</strong></a>
+               Lletra DNI.</li>
+            <li><a target="_blank" href="./Modulo7/M735.html"><strong> Ejercicio M735</strong></a>
+               Comprovar si una frase està en minúscules, majúscules o minúscules i majúscules.</li>
+         </ul>
+      </details>
+
+      <details id="modulo8">
+         <summary><mark>Módulo 8. Objetos, arrays de objetos, métodes d'arrays i altres estructures
+               <img src="./img/new.png" alt="new"/></mark></summary>
+         <ul>   
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_arrays.asp">
+                     <b>Arrays</b></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=M1HnizZ6diM">
+               Video #9. Arrays I - Dorian Design.</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=M1HnizZ6diM">
+               Video #10. Arrays II - Métodos de Array - Dorian Design.</a></li>                     
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_loop_forof.asp">
+               Bucle for-of</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=G0uvM98lmd8">
+               Video #13. Arrays III - Bucles for-in, for-of - Dorian Design.</a></li>   
+
+            <li><a href="#"><mark>Funcions array.find, array.findIndex, array.filter, etc</mark></a></li>
+            <li><a href="https://www.youtube.com/watch?v=5yPf74sCu2k ">
+               <mark>7 MÉTODOS DE ARRAYS en JAVASCRIPT QUE DEBES CONOCER</mark></a></li>
+         </ul>
+      </details>
+
+      <details id="modulo9">
+         <summary>Módulo 9. POO. Objectes i classes</summary>
+         <ul>
+            <li><mark>Objectes. Prototype (PDF) <img src="./img/new.png" alt="new"/></mark> (hacer)</li>
+            <li><a target="_blank" href="./Modulo9/FDLP_JS_M8_POO1.pdf">
+               Programació Orientada a Objectes (PDF) <mark>(cambiar)</mark></a></li>
+            <li><a target="_blank" href="./Modulo9/M90/index.html">
+               <mark>Ejercicio. Carrousel de imatges (Array d'objectes) 
+               <img src="./img/new.png" alt="new"/></mark></a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/js/js_classes.asp">
+               POO en JavaScript</a></li>
+            <li><a href="./Modulo9/FDLP_JS_M8_POO2.pdf">POO en JavaScript (PDF)</a></li>
+            <li><a target="_blank" href="./Modulo9/M91/M81.html"> 
+               Ejercicio M8.1</a> La classe Ordinador</li>
+            <li><a target="_blank" href="./Modulo9/M92/M82.html"> 
+               Ejercicio M8.2</a> Hotels (array d'objectes)</li>
+            <li><t>De UML a Java (PDF)</t> (quitar o rehacer)</li>
+            <li><a target="_blank" href="./Modulo9/M93/M83.html"> 
+               Ejercicio M8.3</a> Cuentas Bancarias</li>
+            <li><a target="_blank" href="./Modulo9/M94/Joan/edificis.html"> 
+               Ejercicio M8.4</a> Edificis (Herencia)</li>
+            <li><a target="_blank" href="./Modulo9/M95/M85.html">
+               Ejercicio M8.5</a> Cercle</li>
+            <li><a target="_blank" href="./Modulo9/M96/Joan/cotxes.html">
+               Ejercicio M8.6</a> Escuderies</li>
+            <hr>
+            <p>No los tengo...</p>
+            <li><t><a target="_blank" href="./Modulo9/M9E1/M8E1.html">
+               <strong> Ejercicio M8 Extra 1</strong></a>Ruleta Rusa</t></li>
+            <li><t><a target="_blank" href="./Modulo9/M9E2/M8E2.html">
+               <strong> Ejercicio M8 Extra 2</strong></a>Cinema</t></li>
+         </ul>
+      </details>
+
+   </div> <!--contenedor -->
+   <script src="./js/js.js"></script>
+</body>
+</html>
