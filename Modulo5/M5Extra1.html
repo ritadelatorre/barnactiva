@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Ejercicio M5 Extra 1</title>
+      <meta charset='utf-8'>
+      <link href="./css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+      <!--Esto es HTML-->
+      <h1>Ejercicio M5 Extra 1</h1>
+      <div id="enunciado">
+			<p>Adivinar número entre 1 y 500</p>
+		</div>
+      <div class="ejercicio">
+			<p>Escribe un número entre 1 y 500: <input id='numero' type='number' value='250'/></p>
+			<p><input class="boton" id="boton" type='button' Value=' Adivinar ' onClick='mostrar()'/></p>
+			<h1 style="line-height: 1em;"  id="resultado"></h1>
+
+		</div>
+		<!--Acá pasaremos a JavaScript (con la instrucción SCRIPT)--> 
+		<script>
+         const NUMERO_RANDOM = Math.ceil((Math.random() * 500));
+         console.log("Número random: ", NUMERO_RANDOM);
+         let intentos = 0;
+
+         function mostrar() {
+            intentos++;
+            let texto = "", menorMayor="", diferencia=0;
+				let numUsuario = parseInt(document.getElementById("numero").value);
+				if (numUsuario ==='' || numUsuario === null || isNaN(numUsuario) || numUsuario<1 || numUsuario>500 ) {
+					document.getElementById("resultado").innerHTML="Escriba un número entero entre 1 y 500";
+				} else {
+               menorMayor = "Tu número es " + ((NUMERO_RANDOM > numUsuario) ? "menor al mío." : "mayor al mío."); 
+               diferencia = Math.abs(NUMERO_RANDOM - numUsuario);
+               console.log("Resultado (" + diferencia +") es igual a "+ NUMERO_RANDOM + "-"+ numUsuario);
+
+               if (diferencia >50 ) {
+                  texto = "Frío, frío. " + menorMayor;
+               } else if (diferencia>15 && diferencia <=50) {
+                  texto = "Tibio, tibio. " + menorMayor;
+               } else if (diferencia>0 && diferencia <=15) {			
+                  texto = "Caliente, caliente. " + menorMayor;
+               } else if (diferencia == 0) {
+                  texto = "Excelente! El número era " + NUMERO_RANDOM +". Has ganado! (" + intentos + " intentos)";
+                  document.getElementById("boton").style.display="none";
+               }
+
+               document.getElementById("resultado").innerHTML = texto;
+            }
+				
+			}
+		</script>
+	</body>
+</html>

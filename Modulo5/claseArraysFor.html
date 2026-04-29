@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+   <p>
+      Escribe un número de mes y te indico los días que tiene 
+      <input id="mes" type="number" min="1" max="12" value="1">
+   </p>
+   <p><button onclick="indicaDias()">Indica Días</button></p>
+
+   <script>
+
+      let alumnes = []; //declarar un array vacio
+
+
+
+
+
+
+
+
+
+
+      function indicaDias(){
+         let nomMes =    ["enero","febrero","marzo", "abril", "mayo"]
+         //  posiciones      0   1   2   3   4   5   6  ...etc
+         const diasMeses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+         //alert("El mes de enero tiene " + diasMeses[1] + "dias");
+
+         let varMes = parseInt(document.getElementById("mes").value);
+
+         if (varMes < 1 || varMes > 12) {
+            alert("Mes inválido. Escribe un número entre 1 y 12");
+         } else {
+            let varNombreMes = nomMes[varMes-1];
+            //alert("El mes de " + varNombreMes + " tiene " + diasMeses[varMes-1] + " dias ");
+         }
+
+         /*
+         alert("La posición 0 de nomMes tiene el valor " + nomMes[0]);
+         nomMes[0] = "MESES";
+         alert("La posición 0 de nomMes tiene el valor " + nomMes[0]);
+
+        let contenido = "El contenido del array nomMes es: \n";
+        
+        for (let valor of nomMes) {
+           contenido += valor + " -- ";
+         }
+         alert(contenido);
+         */
+        
+        //let nomMes =    ["enero","febrero","marzo", "abril", "mayo"]
+
+        let elementos = diasMeses.length;
+        let contenido = "Los dias de los meses impares son: \n";
+
+        let suma = 0;
+
+        for (let i = 2; i <= 10 ; i+=2) {
+            suma += i;
+         }         
+         alert(suma);
+
+      }     
+
+   </script>
+
+   
+</body>
+</html>
