@@ -1,0 +1,19 @@
+<p id="mostrar"> en HTML
+------------------------------------------------
+
+// Crear 3 variables: nom, cognom, edat
+let nom, cognom, edat, respuesta;
+
+// Preguntar con prompt ...
+nom = prompt("Dime tu nombre");
+
+
+// Concatenamos las variables en la variable respuesta
+respuesta = "Hola, te llamas " + nom + " " + cognom + " y tienes " + edat + " años.";
+
+//Mostrar en consola la respuesta
+console.log(respuesta);
+//con alert
+alert(respuesta);
+//DOM
+document.getElementById("mostrar").innerHTML=respuesta;

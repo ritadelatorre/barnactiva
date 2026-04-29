@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Entrada y salida de Datos</title>
+</head>
+
+<body>
+   <p>¿Cómo te llamas?     <input id="nom" type="text" value="Rita" /></p>
+   <p>¿Irás a la fiesta?   <input id="confirma" type="text" value="si"/></p>
+   <p><button onclick="respuesta()">Confirmar</button></p>
+   <p id="confirmacion" style="color: blue">este párrafo es azul</p>
+
+   <script>
+      "use strict";
+      function dialogos() {
+         //CUADROS DE DIALOGO: ALERT, PROMPT y CONFIRM
+         let nombre, fiesta, confirmado;
+         nombre = prompt("¿Cómo te llamas?", "Rita"); //LEER
+         fiesta = confirm(nombre + ", irás a la fiesta?"); //LEER TRUE O FALSE
+         confirmado = nombre + " has dicho " + fiesta + " a la fiesta"; //ESCRIBIR
+         alert(confirmado);
+      }
+
+      function respuesta() {
+         //ESCRIBIR EN UN ELEMENTO HTML
+         let varNom = document.getElementById("nom").value;
+         let varConfirma = document.getElementById("confirma").value;
+         console.log(varNom);
+         document.getElementById("confirmacion").innerHTML = varNom + " has dicho que " + varConfirma;
+         document.getElementById("nom").disabled = true; //disabled significa inhabilitado
+         document.getElementById("confirma").disabled = true;
+         document.getElementById("confirmacion").style.color = "green"; 
+         dialogos();
+      }
+   </script>
+</body>
+
+</html>

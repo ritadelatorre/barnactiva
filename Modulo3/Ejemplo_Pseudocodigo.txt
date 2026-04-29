@@ -1,0 +1,15 @@
+En HTML hacer dos cajas de numero (input type="number")
+valor1 
+valor2
+y un boton CALCULAR que llame a la función calcular()
+También necesitamos 4 párrafos
+- suma, resta, multiplicación y división
+
+En JAVASCRIPT
+-Creamos dos variables para guardar valor1 y valor2
+(recordar que en HTML todo viene en texto, hay que usar Number)
+-cambiamos el valor del párrafo suma con
+document.getElementById("suma").innerHTML =
+   "El resultat de la suma és: " + (valor1 + valor2);
+etc...
+

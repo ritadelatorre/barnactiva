@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Operadores</title>
+</head>
+<body>
+   <p>Escribe un número: <input id="num" type="number"/></p>
+   <!-- input type = number es para escribir números -->
+   <p><button onclick="respuesta()">Confirmar</button></p>
+   
+   <p style="color:blueviolet; font-family: Georgia, 'Times New Roman', Times, serif;" id="resultado"></p>
+   <script>
+      function respuesta() {
+         const OPERADOR2 = 2;
+         let varNum = Number(document.getElementById("num").value);
+         let varNum2 = 5;
+
+         let varSuma = varNum + OPERADOR2; //SUMA
+         let varResta = varNum - OPERADOR2; //RESTA
+         let varMult = varNum * OPERADOR2; //Multiplica
+         let varEleva = varNum ** OPERADOR2; //Eleva a una potencia
+         let varDiv = varNum / OPERADOR2; //Divide
+         let varMod = varNum % OPERADOR2; //Extrae Resto
+
+         let varResultado = "El operador que se usará es el " + OPERADOR2 + "<br>"; // + en textos es para concatenar
+         // += se lee como lo que tiene la variable y además...
+         varResultado += "La suma es igual a " + varSuma + "<br>";         
+         varResultado += "La resta es igual a " + varResta + "<br>";         
+         varResultado += "La multiplicación es igual a " + varMult + "<br>"; 
+         varResultado += "La potencia es igual a " + varEleva + "<br>";         
+         varResultado += "La división es igual a " + varDiv + "<br>";         
+         varResultado += "El resto, residuo o módulo es igual a " + varMod + "<br>";         
+
+         document.getElementById("resultado").innerHTML=varResultado;
+
+         if (varNum === varNum2) {
+            alert ("Bingo! VarNum y VarNum2 son idénticas (valor y tipo)");
+         } else {
+            alert ("VarNum y VarNum2 NO son idénticas (valor y tipo)");
+         }
+      }
+   </script>
+   
+</body>
+</html>
