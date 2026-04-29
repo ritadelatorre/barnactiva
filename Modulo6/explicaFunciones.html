@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Explica Funciones</title>
+</head>
+
+<body>
+   <button onclick="funcion1()">Funcion 1</button>
+   <button onclick="funcion2('Laura', 18)">Funcion 2 (indica nombre y edad)</button>
+   <button onclick="funcion3()">Funcion 3</button>
+   <button onclick="mesHoy()">mesHoy del PowerPoint</button>
+   <button onclick="mesHoyL()">mesHoy del PowerPoint</button>
+
+   <p id="mostraMes"></p>
+   <p id="mostraMesL"></p>
+
+   <script>
+      //hoisting
+
+      function funcion2(nombre, edad) {
+         //Los parámetros se leen por el orden de la posición en el cual se envían
+         alert("Hola " + nombre + " tienes " + edad + " años");
+      }
+
+      function funcion1() {
+         alert("Hola gente");
+         let nom = prompt("Dime tu nombre");
+         let edat = prompt("Dime tu edad");
+         funcion2(nom, edat);
+         funcion2('Laura', 18);
+         funcion2();
+         alert("He regresado a Funcion 1");
+      }
+
+      function esBisiesto(year) { //Ejercicio M7.2 - 7
+         return ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0))) ? true : false;
+      }
+
+      function funcion3() {
+         let yrNac = parseInt(prompt("Dime tu año de nacimiento y te digo si fue bisiesto"));
+         // cuando una función tiene un return para llamarla debemos usar una variable
+         // que reciba el valor retornado
+         let yrBisiesto = esBisiesto(yrNac);
+
+         if (yrBisiesto == TRUE) {
+            alert("Tu año de nacimiento es bisiesto");
+         } else {
+            alert("Tu año de nacimiento NO es bisiesto");
+         }
+      }
+
+      function mesHoy() {
+
+         document.getElementById("mostraMes").innerHTML = "Estamos en " + mesActual();
+      }
+      function mesHoyL() {
+         document.getElementById("mostraMesL").innerHTML = "Estamos en " + mesActualL();
+      }
+
+      function mesActual() {
+         let fechaHoy = new Date(); //Data ordinador
+         let mes = fechaHoy.getMonth() + 1;
+         let dia = numeroALetra(fechaHoy.getDate()); 
+         // pasa 15 como parametro, y dia toma el valor quince 
+         let regresar = dia + ' de ' + mes; // quince de 11
+
+         return regresar;
+      }
+
+      function numeroALetra(numero) { // 15
+         let textoNumero;
+         //bla, bla
+         return textoNumero; // quince
+      }
+
+      function mesActualL() {
+         let meses = ["Gener", "Febrer", "Març", "Abril", "Mai", "Juny", "Julliol",
+            "Agost", "Setembre", "Octobre", "Novembre", "Desembre"];
+         let fechaHoy = new Date(); //Data ordinador
+         let mes = meses[fechaHoy.getMonth()];
+         let dia = fechaHoy.getDate();
+         let regresar = dia + ' de ' + mes;
+
+         return regresar;
+      }
+   </script>
+
+</body>
+
+</html>

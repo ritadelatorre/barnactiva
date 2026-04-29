@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CALLBACKS</title>
+</head>
+
+<body>
+   <h1>CALLBACKS</h1>
+   <h3>Un callback es una función que se pasa a otra como un argumento.</h3>
+   <p>
+      <p>Array: <input id="array" type="text" value="3,4,5,6,7,8,9" size="60"/></p> 
+      <blockquote>
+         <button onclick='filtrar(1)' style="width: 15em; height: 2em;">Filtra pares</button>
+         <button onclick='filtrar(2)' style="width: 15em; height: 2em;">Filtra impares</button>
+      </blockquote>
+      <p id="filtrados"></p>
+   </p>
+
+   <script>
+
+      const esImpar = numero => numero % 2 != 0;
+      
+      function esPar(numero) {
+         return numero % 2 == 0;
+      }
+
+      function filtra(numeros, fn) {
+         let results = [];
+         for (const numero of numeros) {
+            if (fn(numero)) {
+               results.push(numero);
+            }
+         }
+         return results;
+      }
+
+      function filtrar(opcion) {
+         const numeros = document.getElementById("array").value.split(",");
+         console.clear();
+         console.log("Array numeros: ", numeros);
+
+         let txtDoc = document.getElementById("filtrados");
+
+         switch (opcion) {
+            case 1: txtDoc.innerHTML = "Los números pares son " + filtra(numeros, esPar); break;
+            case 2: txtDoc.innerHTML = "Los números impares son " + filtra(numeros, esImpar); break;
+         }
+
+         console.log("Impares: ", filtra(numeros, esImpar));
+         console.log("Pares: ", filtra(numeros, esPar));
+      }
+   </script>
+
+</body>
+
+</html>

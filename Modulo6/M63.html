@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="./css/estilos.css" rel="stylesheet">
+   <style>
+      button {width: 15em !important; height: 2em !important;}
+      .peq {font-size: 0.8em !important; margin-left: 19em; color: blue;}
+      input[type=text], input[type=number]  {font-size: 0.75em;}
+   </style>
+   <title>(M6) 3</title>
+</head>
+<body>
+   <details>
+      <summary>Ejercicio M6.3 </summary>
+      <p>Realitza un programa amb 5 funcions i un array buit (Global) anomenat <b>temps</b></p>
+      <p>L'HTML ha de tenir quatre botons que truquin a una única funció menu que enviï per paràmetre la funció que es vol executar. Ejemplo:</p>
+      <code>&lt;button onclick='menu(1)'&gt; Registrar fecha y hora&lt;/button&gt;</code>
+      <p>La funció menu s'encarregarà de passar els paràmetres necessaris a la resta de funcions.</p>
+      <ol>
+         <li>Crea una funció que afegeixi a l'array temps, la data i hora actuals new Date()</li><br>
+         <li>Crea una funció que rebi un valor i un array de números com a paràmetre.</li>
+         <p>Aquesta funció retornarà l’índex de l’array on es troba el valor. 
+            Si el valor no es troba, es retornará -1.</p><br>
+         <li>Crea una funció que rebi una frase com a paràmetre i la torni en minúscules sense espais en blanc, sense accents i sense signes de puntuació.</li>
+         <p>Exemple, si la frase és:<strong>- A Cornellà, Tània i Aina tallen roca.</strong></p>
+         <p>La funció haurà de tornar: <strong>acornellataniaiainatallenroca</strong></p><br>
+         <li>Crea una funció que rebi un array i un string com a paràmetre
+            i torni un altre array amb aquells elements de l'array rebut que continguin el text enviat.</li>
+            <p>Exemple. Es rep el següent array:</p> 
+            <p>assignatures = [
+            'Història universal',
+            "Història d'Espanya",
+            'Geografia',
+            'Història de la llengua catalana',
+            'Antropologia',
+            'Anglès']</p>            
+            <p>i la paraula 'Història'</p>   
+            <p>La funció haurà de tornar el següent array:
+            [
+            'Història universal',
+            'Història d'Espanya',
+            'Història de la llengua catalana',
+            ]</p>
+      </ol>
+   </details>
+   <h1>Ejercicio M.63</h1>
+   <p>
+      <button onclick='menu(1)'>Registrar fecha y hora</button>
+   </p>
+   <p class="peq" id="resultado1"></p>
+   <hr>
+   <p>
+      <button onclick='menu(2)'>Posición de valor en array</button>
+      <label class="label1">Array:</label><input id="array2" type="text" value="3,4,5,6,7,8,9" size="60"/> 
+      <label class="label1">Valor:</label><input id="valor"  type="number" value="5" size="3"/>
+   </p>
+   <p class="peq" id="resultado2"></p>
+   <hr>
+   <p>
+      <button onclick='menu(3)'>Limpiar texto</button>
+      <label class="label1">Frase:</label><input id="frase"  type="text" 
+      value="A Cornellà, Tània i Aina tallen roca" size="60"/>
+   </p>
+   <p class="peq" id="resultado3"></p>
+   <hr>
+   <p>
+      <button onclick='menu(4)'>Devolver array filtrado</button>
+   </p>
+   <p>
+      <label class="label1">Array:</label>
+      <input id="array4" type="text" value="Història universal, Història d'Espanya, Geografia, Història de la llengua catalana, Antropologia, Anglès" size="93"/> 
+      <label class="label1">Texto: </label><input id="termino"  type="text" value="Història" size="10"/>
+   </p>
+   <p class="peq" id="resultado4"></p>
+   
+   <script>
+      const temps = [];
+   
+      function registraFechaHora() {
+         let fecha = new Date;
+         temps.push(fecha.toDateString() + ' ' + fecha.getHours() + ':' + fecha.getMinutes());
+      }
+      
+      function buscarEnArray(arreglo, valor) {
+         console.log(arreglo);
+         let posicion = -1;
+         let i = 0;
+         let largo = arreglo.length;
+
+         console.log("posición", posicion)
+         console.log("i", i)
+         console.log("largo", largo)
+         console.log(i < largo && posicion == -1);
+
+         while (i < largo && posicion == -1) {
+            if (parseInt(arreglo[i]) == parseInt(valor)) {
+               posicion = i;
+            }
+            i++;
+         }
+         return posicion;
+      }
+
+      function limpiarTexto(frase) {
+         let valido = "abcçdefghijklmnñopqrstvvxyz";
+         let letraA = "àâá";
+         let letraE = "éêëé";
+         let letraI = "ìîí";
+         let letraO = "ôó";
+         let letraU = "ùüú";
+         
+         let fraseLimpia = "";
+         let largo = frase.length;
+         frase = frase.toLowerCase();
+
+         console.clear();
+         console.log('frase', frase);
+
+         for (let i = 0; i<largo; i++) {
+            if (valido.includes(frase.charAt(i))) {
+               fraseLimpia += frase.charAt(i);
+            }
+            if (letraA.includes(frase.charAt(i))) {fraseLimpia +='a'};
+            if (letraE.includes(frase.charAt(i))) {fraseLimpia +='e'};
+            if (letraI.includes(frase.charAt(i))) {fraseLimpia +='i'};
+            if (letraO.includes(frase.charAt(i))) {fraseLimpia +='o'};
+            if (letraU.includes(frase.charAt(i))) {fraseLimpia +='u'};
+         }
+         return fraseLimpia;
+      }
+
+      function arrayFiltrado(arreglo, palabra) {
+         let arregloFiltrado = [];
+         let largo = arreglo.length;
+         for (let i = 0; i<largo; i++) {
+            if (arreglo[i].toLowerCase().includes(palabra.toLowerCase())) {
+               arregloFiltrado.push(arreglo[i]);
+            }
+         }
+         return arregloFiltrado;
+      }
+
+      function menu(opcion) {
+
+         let arreglo = [];
+         let arregloFiltrado = [];
+         let mostrar, valor, frase, palabra;
+
+         switch (opcion) {
+            case 1:
+               registraFechaHora();
+               mostrar = "Contenido del array temps: " + temps.join(', ');
+               break;
+
+
+               
+            case 2:
+               arreglo = document.getElementById("array2").value.split(',');
+               valor = document.getElementById("valor").value;
+               mostrar = "El <b>" + valor + "</b> está en la posición <b>" + buscarEnArray(arreglo, valor) 
+                  + "</b> del arreglo <b>" + arreglo +"</b>";
+               break;
+
+            case 3:
+               frase = document.getElementById("frase").value;
+               mostrar = "La frase <b>" + frase + "</b> después de limpia: <b>" + limpiarTexto(frase) +"</b>";
+               break;
+
+            case 4:
+               arreglo = document.getElementById("array4").value.split(', ');
+               palabra = document.getElementById("termino").value;
+
+               arregloFiltrado = arrayFiltrado(arreglo, palabra);
+               
+               mostrar = "El término <b>" + palabra + "</b><br>"
+               mostrar += "se encuentra en <b>" + arregloFiltrado.join(', ') + "</b>";
+               break;
+         }
+         document.getElementById('resultado'+opcion).innerHTML = mostrar;
+      }
+   
+   </script>
+
+</body>
+</html>
