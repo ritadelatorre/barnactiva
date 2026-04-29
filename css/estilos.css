@@ -1,0 +1,37 @@
+body {
+   margin: 0 auto;
+   font-size: 11pt;
+   font-family: Nunito, Tahoma, Geneva, Verdana, sans-serif;
+   padding: 0 15em 5em 5em;
+}
+div {padding-left: 1em;}
+header {position: fixed; top: 0; width: 100%; background-color: #fff; padding-bottom: 0.5em;}
+
+em {color: deeppink;}
+b {font-weight: bolder; color: deeppink;}
+section{
+   border: 1px; 
+   border-color: deeppink;
+   display: block;
+}
+t {
+   color: red;
+   text-decoration:line-through;
+}
+h1, h2, summary {
+   margin-top:0.5em; 
+   margin-bottom: 0.5em;
+   font-size: 110%; 
+   font-weight: bolder;
+   background-color: #eee;
+   cursor: pointer;
+}
+h1 {
+   color: deeppink;
+   background: none;
+   font-size: 150%;   
+}
+ul {list-style-type: circle;}
+button{font-size: 70%; font-weight:lighter; color: deeppink;}
+button a{font-weight:lighter; color:deeppink; text-decoration: none;}
+summary {border-top: 1px solid gray;}
