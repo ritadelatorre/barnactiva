@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Ejercicio M7.17</title>
+      <meta charset='utf-8'>
+      <link href="./css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+      <!--Esto es HTML-->
+      <h1><input class="bot" type="button" id="b1" value="-" onClick='desplegar("b1", "enunciado")'/> Ejercicio M7.17</h1>
+      <div id="enunciado">
+			<p>Fer un programa on l'usuari introdueix per pantalla un caràcter i un número. <br>
+				El programa imprimeix per pantalla un quadrat amb la mida i el caràcter introduïts per l'usuari.</p>
+		</div>
+      <div class="ejercicio">
+			<h1>CUADRADO DE CARACTERES</h1>
+			<h1 id="resultado"></h1>
+
+		</div>
+		<!--Acá pasaremos a JavaScript (con la instrucción SCRIPT)--> 
+		<script>
+			
+			let i = 0;
+			let cuadrado = "";
+			let linea = "";
+				let caracter = prompt("¿Con cuál caracter lo quieres hacer?");
+				let lado = parseInt(prompt("¿De cuántas lineas quieres que sea? (1 - 10):"));
+
+				for (i = 1; i <= lado; i++) {
+					linea += caracter + " ";
+				}
+
+				for (i = 1; i <= lado; i++) {
+					cuadrado += linea + "\n";
+				}
+
+				alert(cuadrado);
+			
+		</script>
+
+	</body>
+</html>

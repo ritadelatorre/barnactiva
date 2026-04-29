@@ -1,0 +1,15 @@
+// leemos la variable numero, ya sea con prompt o desde un input
+let i = 2;
+let primo = true; // asumimos que el número es primo
+
+while (i < numero &&  primo == true) {
+	primo = (numero % i == 0) ? false : true;
+	i++;
+}		
+mensaje = (primo==true) ? "El número ES primo" : "El número NO ES primo";
+
+--------------------------------------------------------------------------------------
+
+for (i=2; i<numero; i++) { // en este caso da el resultado, pero no es óptimo
+	primo = (numero % i == 0) ? false : true;
+}

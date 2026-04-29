@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Ejercicio M7.2-4</title>
+      <meta charset='utf-8'>
+      <link href="./css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+      <!--Esto es HTML-->
+		<details>
+			<summary>Ejercicio M7.2-4</summary>
+				<p>Realizar un programa en el cual se introduzca un número y que el programa calcule el factorial del número introducido.</p>
+				<p>El factorial de n se define como el producto de todos los números enteros positivos desde 1 (es decir, los números naturales) hasta n.</p>
+		</details>
+
+		<h1>FACTORIAL DE UN NÚMERO</h1>
+
+		<p>Escribe un número entero: <input type="text" id="nro"/></p>
+		<p><button onClick='dibujar()'>Calcular</button></p>
+		
+		<em><h3 id="resultado"></h3></em>
+
+
+		<!--Acá pasaremos a JavaScript (con la instrucción SCRIPT)--> 
+      <script>
+
+			function dibujar() {
+				let numero = parseInt(document.getElementById('nro').value);
+				//etcetera...
+
+				let factorial = 1;
+				let mensaje = numero + "! = ";
+
+				for (let i=1; i<=numero; i++) {
+
+					factorial = factorial * i ;				
+					if ( i < numero ) {
+						mensaje += i + " x ";
+					} else {
+						mensaje += i + " = ";
+					}				
+				}
+				mensaje += factorial;
+
+				document.getElementById('resultado').innerHTML = mensaje;				
+			}
+			
+
+		</script>
+	</body>
+</html>

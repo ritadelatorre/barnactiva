@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Ejercicio M7.2-8</title>
+      <meta charset='utf-8'>
+      <link href="./css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+		<details>
+			<summary>Ejercicio 7.28.</summary>
+			<p>El usuario introduce un número y el programa muestra la sucesión de Fibonacci</p>
+			<p><u>Ejemplo:</u> Si el usuario introduce el 10, el resultado ha de ser:</p>
+			<h3><em>0, 1, 1, 2, 3, 5, 8, 13, 21, 34</em></h3>
+		</details>
+
+		<h1>SUCESIÓN DE FIBONACCI</h1>
+		<p>Escribe un número entero: <input type="number" id="nro"/></p>
+		<p><input class="boton" type='button' Value=' Calcular ' onClick='fibonacci()'/></p>
+		<em><h3 id="resultado"></h3></em>
+
+      <!--Acá pasaremos a JavaScript (con la instrucción SCRIPT)--> 
+      <script>
+
+			function absoluto (num) {
+				let numAbs = num;
+				if (isNaN(num)) {
+					numAbs = "Error";
+				} else if (num < 0) {
+					numAbs = num * -1;
+				}
+				return numAbs;
+			}
+
+			function fibonacci() {
+				let numero = absoluto(parseInt(document.getElementById('nro').value)); 
+				
+				// número de elementos de la serie
+				console.log(numero);
+
+				let n1 = 0;
+				let n2 = 1;
+				let auxiliar = 0;
+				let i = 1;
+				let mensaje = "0";	
+
+				do {
+					auxiliar = n1;
+					n1 = n2;
+					mensaje += ", " + n1;
+            	n2 = auxiliar + n1;			
+					i++;
+				} while (i < numero);
+				
+				document.getElementById('resultado').innerHTML = mensaje;				
+			}
+
+
+
+		</script>
+	</body>
+</html>

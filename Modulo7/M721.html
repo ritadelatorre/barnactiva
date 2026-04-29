@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Ejercicio M7.2-1</title>
+      <meta charset='utf-8'>
+      <link href="./css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+		<details>
+			<summary>Ejercicio M7.2-1</summary>
+			<p>Haz un programa que muestre lo siguiente por pantalla:</p>
+				<blockquote><h3>
+						*<br>
+						* *<br>
+						* * *<br>
+						* * * *<br>
+				</h3></blockquote>
+			<p>El número de líneas formadas por * viene dado por un número que el usuario indicará por <b>pantalla</b>. (En el ejemplo, 4).</p><br>
+		</details>
+
+		<h1>TRIÁNGULO RECTÁNGULO DE ASTERISCOS</h1>
+		<p>¿De cuántas lineas quieres que sea? <input type="text" id="alto"/></p>
+		<p><input class="boton" type='button' Value=' Dibujar '  onClick='dibujar()'/></p>
+		<em><h3 id="tri"></h3></em>
+
+      <!--Acá pasaremos a JavaScript (con la instrucción SCRIPT)--> 
+      <script>
+		function dibujar() {
+			let lineas=0;
+			let triangulo = "";
+
+			lineas = Number(document.getElementById('alto').value);
+			
+			for (let i=1; i<=lineas; i++) {
+				for (let j=1; j<=i; j++) {
+					triangulo += "* ";
+				}
+				triangulo += "<br>";
+			}
+			document.getElementById('tri').innerHTML = triangulo;
+		}
+		</script>
+    </body>
+</html>

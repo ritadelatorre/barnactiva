@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Ejercicio M7.32</title>
+      <meta charset='utf-8'>
+      <link href="./css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+      <details>
+      <summary>Ejercicio M7.32</summary>
+      <p>En este programa el usuario debe introducir un texto y el programa lo mostrará al revés</p> 
+      </details>
+      <h1>Mostrar el texto al revés</h1>
+      <p>Introduce un texto (te lo muestro al revés):</p>
+      <p><input id="texto" type="text" size="100"/></p>        
+
+      <p><input type='button' onClick='mostrar()' Value='continuar' /></p>
+      <p><b>Tu texto al revés</b>:<br> <span id="resultado"></span></p>
+
+      <!--Acá pasaremos a JavaScript (con la instrucción SCRIPT)--> 
+      <script>
+         function mostrar() {
+            "use strict"; //Obligamos a definir las variables
+				
+            let texto = document.getElementById("texto").value;
+            let deReves = "";
+            let largo = texto.length-1;
+
+            // let nombre = 'PAULA';
+            // posición 0 de Paula es P ==> nombre.charAt(0);
+
+            for (let i = largo ; i>=0 ; i--)  {
+                  deReves += texto.charAt(i);
+            }
+            
+            //deReves = deReves.toLowerCase();
+            document.getElementById("resultado").innerHTML = deReves;
+
+         }
+         
+      </script>
+    </body>
+</html>
+
+

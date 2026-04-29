@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Ejercicio M7.35</title>
+      <meta charset='utf-8'>
+      <link href="./css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+      <details>
+         <summary>Ejercicio M7.35</summary>
+         <p>Comprobar si una frase introducida per el usuario está formada sólo por minúsculas, sólo por mayúsculas o por minúsculas y mayúsculas</p> 
+      </details>
+
+      <p><label for="texto">Introduce una frase:</label></p>
+      <p><input id="texto" type="text" size="120" value="Esta es una Frase"/></p>        
+
+      <p><input type='button' onClick='mostrar()' Value='continuar' /></p>
+
+      <p>Convertir la frase a:&nbsp;&nbsp;&nbsp;
+         <input type='button' onClick='minusculas()' Value='minúsculas' />
+         <input type='button' onClick='mayusculas()' Value='MAYÚSCULAS' /></p>
+      
+      <p><b>Resultado</b>:</p> 
+      <em><h3 id="resultado"></h3></em>
+
+      
+      <!--Acá pasaremos a JavaScript (con la instrucción SCRIPT)--> 
+      <script>
+         function mostrar() {
+            "use strict"; //Obligamos a definir las variables
+				
+				let mensaje="";
+				let texto = document.getElementById("texto").value;
+				let textoMin = texto.toLowerCase();
+				let textoMay = texto.toUpperCase();
+				
+				if (texto == textoMin) {
+					mensaje = "La frase está toda en minúsculas";
+				} else if (texto == textoMay) {
+					mensaje = "La frase está toda en MAYÚSCULAS";
+				} else {
+					mensaje = "La frase usa minúsculas y MAYÚSCULAS";
+				}
+				//alert(mensaje);
+
+				document.getElementById("resultado").innerHTML = mensaje;                  
+         }
+
+         function minusculas() {
+            document.getElementById("texto").value=document.getElementById("texto").value.toLowerCase();
+            mostrar();
+         }
+
+         function mayusculas() {
+            document.getElementById("texto").value=document.getElementById("texto").value.toUpperCase();
+            mostrar();
+         }
+      </script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>Ejercicio M7.26</title>
+      <meta charset='utf-8'>
+      <link href="./css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+      <details>
+            <summary>Ejercicio 7.26.</summary>
+            <p>Introducir una serie de números hasta hallar un número primo.</p>
+      </details>
+
+      <h1>SE DETIENE AL INTRODUCIR UN NÚMERO PRIMO</h1>
+
+      <p><input type='button' onClick='mostrar()' Value='Comenzar' /></p>
+      <p id="resultado"></p>
+      <!--Acá pasaremos a JavaScript (con la instrucción SCRIPT)-->
+      <script>
+            function validarEntero(numero) {
+                  validado = true;
+                  if (isNaN(numero) || numero == "" || numero < 1) {
+                        validado = false;
+                  }
+                  return validado;
+            }
+
+            function esPrimo(numero) {
+                  let i = 2;
+                  let primo = true;
+                  while (i < numero/2+1 && primo == true) {
+                        if (numero % i == 0) {
+                              primo = false;
+                        }
+                        i++;
+                  }
+                  return primo; // devuelve true o false
+            }
+
+            function mostrar() {
+                  let validado = true;
+                  let resultado;
+                  let numero = 0;
+                  let encontrado = false;
+                  let valido = true;
+                  const MENSAJE = "Introduce un número entero positivo ";
+
+                  while (!encontrado) {
+
+                        do {
+                            numero = Number(prompt(MENSAJE, "número"));
+
+                        } while(!validarEntero(numero));
+
+                        encontrado = esPrimo(numero);
+                  }
+                  resultado = "El número <b>" + numero + "</b> es un número primo";
+                  document.getElementById("resultado").innerHTML = resultado;
+            }
+      </script>
+</body>
+
+</html>
