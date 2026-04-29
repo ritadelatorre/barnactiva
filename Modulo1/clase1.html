@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Para que aparezca esta estructura presionar ! y enter -->
+<html lang="es">
+
+<head>
+   <!-- El head es para configurar la web -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Clase 1 JS</title> <!-- Titulo en la pestaña -->
+</head>
+
+<body>
+   <!-- Contenido de la web -->
+   <h1>Titulo principal h1</h1>
+
+
+
+
+
+   <h2>Subtitulo nivel 2 h2</h2>
+   <h6>Subtitulo nivel 6 h6</h6>
+   <p id="parrafo1">p es para párrafos</p>
+
+   <!-- La etiqueta script cambia el lenguaje a JavaScript -->
+   <script>
+      "use strict";
+      let primerNombre; // Crear una variable llamada nombre
+      primerNombre = "Rita"; // Dar el valor Rita a nombre
+
+      let precio = 15;
+      precio = 22;
+      let iva = precio * 0.21; // usamos el operados * para multiplicar
+
+      document.getElementById("parrafo1").innerHTML = primerNombre + " El tipo guardado es " + typeof (primerNombre);
+      console.log(primerNombre + " El tipo guardado es " + typeof (primerNombre));
+      alert(primerNombre + " El tipo guardado es " + typeof (primerNombre));
+   </script>
+</body>
+
+</html>

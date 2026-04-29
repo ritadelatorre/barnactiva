@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>CLASE 3</title>
+</head>
+
+<body>
+   <h1>Explicación de <span id="programa">HTML</span></h1>
+   <hr>
+   <h4>Esto es un párrafo.</h4>
+   <p>Esto es otro párrafo.<br> Me gusta el color
+      <b><mark> <span id="color">azul</span> </mark></b>.
+   </p>
+   <p>¿Cual es tu nombre ? <input id="nombre" type="text" />
+      <p>¿Tu color preferido es ? <input id="color2" type="text" />
+         <button onclick='cambiarColor()'>Cambiar</button></p>
+
+      <script>
+         function cambiarColor() {
+            document.getElementById("programa").innerHTML = "JavaScript";
+            let color = document.getElementById("color2").value;
+
+            console.log("variable color: ", color);
+            document.getElementById("color").innerHTML = color;
+         }
+      </script>
+</body>
+
+</html>

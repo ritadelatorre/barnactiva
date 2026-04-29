@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Variables</title>
+</head>
+<body>
+
+
+
+
+
+
+   <p><button onclick="comenzar()"> comenzar </button></p>
+
+
+<script>
+   function comenzar(){
+      let numero1 ;
+      let numero2 = 5;
+
+      numero1=prompt("Indica el valor del numero 1","");
+      alert(numero1);
+
+      console.log("numero1 :", numero1);
+      console.log("numero2 :", numero2);
+      
+      let resultado = numero1 + numero2;
+      console.log("resultado (numero1 + numero2) :", resultado);
+
+      resultado = numero1 - numero2;
+      console.log("resultado (numero1 - numero2) :", resultado);
+
+      resultado = numero1 * numero2;
+      console.log("resultado (numero1 * numero2) :", resultado);
+
+      resultado = numero1 / numero2;
+      console.log("resultado (numero1 / numero2) :", resultado);
+      
+      resultado = resultado **2;
+      console.log("resultado**2 :", resultado);
+
+      resultado = 5 % 2;
+      console.log("resultado: 5 % 2 :", resultado);
+
+      resultado = 5 / 2;
+      console.log("resultado: 5 / 2 :", resultado);
+
+      resultado = parseInt(5 / 2); //parseInt convierte a entero
+      console.log("resultado: 5 / 2 :", resultado);
+      
+      resultado++;
+      console.log("resultado++ :", resultado);
+
+      resultado--;
+      console.log("resultado-- :", resultado);
+
+      resultado = "tu nombre: " + nombre + "\n" +
+         "tu apellido: " + apellido + "\n" +
+         "tu edad :" + edad;
+      
+      alert(resultado);
+
+   }
+
+
+
+</script>
+</body>
+</html>

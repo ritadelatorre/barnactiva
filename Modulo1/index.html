@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- EL HEAD ES PARA CONFIGURAR -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MI TITULO EN LA PESTAÑA</title>
+
+</head>
+<body>
+   <!-- EL BODY ES PARA ESCRIBIR EN EL DOCUMENTO -->
+   <h1>Me presento</h1>
+
+   <p>Estamos en  <span id="today">2022</span></p>
+   <p>Hoy tengo: <input type="number" id="edad"/> años.</p>
+   <p>¿Qué año será dentro de: <input type="number" id="years"/>?</p>
+   
+   <p>Será el año <span id="newYear"> </span></p>
+   <p>Y tendré <span id="edadFutura"> </span></p>
+   
+   <p><button onclick="calcular()"> calcular </button></p>
+
+   <script>      
+      function calcular() {
+         document.getElementById('newYear').innerHTML = Number(document.getElementById('today').innerHTML) +   Number(document.getElementById('years').value);
+      }
+
+   </script>
+</body>
+</html>

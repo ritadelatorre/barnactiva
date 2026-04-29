@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MODULO3</title>
+</head>
+
+<body>
+   <h1>Ejemplo document.getElementById("id").innerHTML</h1>
+
+   <p id="usuario">Curso JavaScript. </p>
+
+
+   <script>
+      let nombre = prompt("¿Cuál es tu nombre?", "Sofía");
+
+      console.log("En nombre se guarda " + nombre);
+      alert("Hola " + nombre + " Bienvenido!");
+      document.getElementById("usuario").innerHTML += "Hola <b>" + nombre + "</b> Bienvenido!"
+
+      let precio = Number(prompt("¿Cuál es el precio sin IVA?", 10));
+      let precioIva = precio * 1.21;
+      console.log("El precio con IVA es " + precioIva);
+   </script>
+</body>
+
+</html>

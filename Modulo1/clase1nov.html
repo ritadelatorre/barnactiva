@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>CLASE 1</title>
+</head>
+<body>
+   <!-- CONTENIDO DE LA PÁGINA WEB -->
+   <h1>Presentación</h1>
+
+   <p>Mi nombre es: <input id="nombre" type="text" value="Rita"/></p>
+   <p>Mi apellido es: <input id="apellido" type="text" value="de la Torre"/></p>
+   <p>Me gusta: <input id="hobby" type="text" size="100" value="Música, artes gráficas y programación."/></p>
+   <p>En qué año naciste: <input id="anyo" type="number" value="1964"/></p>
+   <button onclick="feedback()">Feedback</button>
+   <button onclick="hobbies()">Hobbies</button>
+   <button onclick="edad()">Calcular Edad</button>
+   <p id="resultado"> </p>
+
+   <!-- ENTRE LAS ETIQUETAS SCRIPT VA EL JAVASCRIPT -->
+   <script>
+      "use strict";
+      function edad() {
+         const YEAR = 2022;
+         let nacimiento = parseInt(document.getElementById("anyo").value);
+         let edadUsuario = YEAR - nacimiento;
+         document.getElementById("resultado").innerHTML="Tienes " + edadUsuario + " años";
+         console.log("Tienes " + edadUsuario + " años");
+      }
+
+      function feedback() {
+
+         let nombre = document.getElementById("nombre").value;
+         let apellido = document.getElementById("apellido").value;
+         alert("Te llamas " + nombre + " " + apellido);
+
+      }
+      function hobbies() {
+         alert("Te gusta " + document.getElementById("hobby").value);  
+      }
+      
+
+   </script>
+</body>
+</html>
