@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Explicación instrucción IF</title>
+</head>
+<body>
+
+   <script>
+      let DNI;
+      const DIVIDIR_POR = 3;
+
+      DNI = parseInt(prompt("Indica el DNI del alumno SIN las letras"));
+      let aula = DNI % DIVIDIR_POR; // resto o residuo de la división
+
+      console.log("El DNI " + DNI + " %" + DIVIDIR_POR + " es igual a ", aula);
+      let a=3;
+      let b=3;
+      let c=3;
+      if ((a==b) && (b ==c)) {
+         alert("a b y c son iguales");
+      }
+      if ( aula == 0 ) {
+         alert("El alumno irá al Aula 1");
+      } else if (aula == 1) {
+         alert("El alumno irá al Aula 2");
+      } else {
+         alert("El alumno irá al Aula 3");
+      }
+
+   </script>
+
+</body>
+</html>

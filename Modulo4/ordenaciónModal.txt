@@ -1,0 +1,3 @@
+const Resultado = ((manoJugador - ManoComputadora) + 3) % 3; // 0 Empate, 1 Gano, 2 Pierdo
+
+normalización modal u ordenación modal

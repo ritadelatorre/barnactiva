@@ -1,0 +1,14 @@
+// Aula 1 Pares
+// Aula 2 Impares
+
+Creo variable DNI					let DNI;				
+Leo DNI alumno						DNI = parseInt(prompt("Dime el DNI del Alumno"));
+
+variableAula = DNI % 2;				let aula = DNI % 2; // Devuelve el resto de la división
+
+si variableAula == 0 {				if (aula == 0) {  // para preguntar se usa doble igual
+	Alumno va al aula 1					alert("El alumno va al aula 1";
+si no, // (porque si no es cero es 1)    } else {
+	Alumno va al aula 2					alert("El alumno va al aula 2";
+									}
+
