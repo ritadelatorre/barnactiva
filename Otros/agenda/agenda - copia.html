@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      body {
+         width: 98%;
+         margin: 0 auto;
+         font-size: 11pt;
+         font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      li {margin-top: 0.5em;}
+      button {width: 20em;}
+   </style>
+   <title>Agenda</title>
+</head>
+<body>
+   <h1>Dados los datos de la agenda, se pide:</h1>
+   <ol>
+      <li>Usando prompts y alerts o la consola y las posiciones directamente. Ejemplo: agenda[1]</li>
+      <ol>
+         <li>Mostrar toda la agenda</li>
+         <button id="11" onclick="f11()">Toda la agenda</button>
+         <li>Mostrar datos de contacto de Emergencias médicas</li> 
+         <button id="12" onclick="f12()">Emergencias médicas</button>
+         <li>Mostrar los datos de cancelación de las tarjetas de crédito</li> 
+         <button id="13" onclick="f13()">Cancelación Tarjetas de Crédito</button>
+      </ol>
+
+      <li>Usando prompts y búsquedas</li>
+      <ol>
+         <li>Mostrar los datos de contacto de los Bomberos</li>
+         <button id="21" onclick='f21()'>Búsqueda Bomberos</button>
+         <li>Indicar la página web de la Cruz Roja</li> 
+         <button id="22" onclick='f20("Cruz Roja", 2)'>Búsqueda web de la Cruz Roja</button>
+         <li>Indicar teléfono y página web de MasterCard</li> 
+         <button id="23" onclick='f20("MasterCard", 3)'>Búsqueda web de la Cruz Roja</button>
+      </ol>
+      <li>Clases</li>
+      <ol>
+         <li>Cambiar el array de nomenclatura de objetos a clases</li>
+         <li>Agregar al array agenda la categoría 'Taxis'</li>
+         <button id="32" onclick='f32("MasterCard", 3)'>Agregar categoría Taxis</button>
+      </ol>
+   </ol>
+
+   <script src="./js/classCategoria.js"></script>
+   <script src="./js/classContacto.js"></script>
+   <script src="./js/main.js"></script>
+   <script src="./js/datos.js"></script>
+   <script src="./js/datosAgenda.js"></script>
+
+</body>
+</html>

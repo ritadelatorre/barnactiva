@@ -1,0 +1,27 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+body {
+   font-family: "Segoe Print", "san-serif";
+   font-size: 10px;
+   background-color: darkred;
+}
+#notas {
+   position: relative;
+   width: 90%;
+   max-width: 800px;
+   min-height: 350px;
+   margin: 150px auto;
+}
+
+#notas #notasText {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: #f1ecb5 ;
+   border: 0;
+   padding: 15px;
+   box-sizing: border-box;
+   font-size: 1.8em;
+}

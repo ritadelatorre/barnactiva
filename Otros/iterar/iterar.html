@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Iterar</title>
+</head>
+<body>
+<p><button onclick="iterar()">Click para salida por consola</button></p>
+   
+<script>
+   
+   function iterar(){
+      let ciudad = {
+         nombre: "Barcelona",
+         provincia: "Barcelona",
+         pais: "España",
+         poblacion: "1,62 millones (2018)"
+      };
+      console.clear();
+      let claves = Object.keys(ciudad); // claves = ["nombre", "provincia", "pais", "poblacion"]
+      let numeroAtributos = claves.length;
+      console.log("El objeto ciudad tiene " + numeroAtributos + " atributos");
+      
+      let i=0;
+      for(const [key, value] of Object.entries(ciudad)){
+         console.log("Key ", i,  key)
+         console.log("Value", i,  value)
+         i++;
+      }
+   }
+
+</script>
+</body>
+</html>
