@@ -1,0 +1,47 @@
+body,html {
+    box-shadow: none;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.body {
+    background-color: rgb(39, 39, 39);
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+}
+
+.title {
+    color: rgb(228, 228, 228);
+}
+
+
+.button, .button__bottom  {
+    background-color: greenyellow;
+    color: rgb(10, 10, 10);
+    height: 3rem;
+    width: 10rem;
+    margin: 1rem;
+    border: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.button__bottom {
+    background-color: rgba(245, 245, 245, 0.835);
+    width: 5rem;
+    position: fixed;
+    bottom: 2rem;
+    height: 4rem;
+}
+
+.result {
+    color: rgb(228, 228, 228);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+}
+
